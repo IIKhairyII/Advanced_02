@@ -24,15 +24,15 @@ namespace Advanced_02
                     return "Book was not found";
                 if(book.Authors is null)
                     return "No authors found";
-                //StringBuilder authors = new("");
-                //foreach (var author in book.Authors)
-                //{
-                //    authors.Append($"{author}, ");
-                //}
-                //return authors.ToString(0, authors.Length - 2);
+                StringBuilder authors = new("");
+                foreach (var author in book.Authors)
+                {
+                    authors.Append($"{author}, ");
+                }
+                return authors.ToString(0, authors.Length - 2);
                 //Another solution
-                string authors02 = string.Join(", ", book?.Authors);
-                return authors02;
+                //string authors02 = string.Join(", ", book?.Authors);
+                //return authors02;
             }
             catch (Exception ex)
             {
